@@ -48,12 +48,15 @@ Einzel_Lens/EinzelLens_Potential.pyを実行.
 使いたい引出電極とアインツェルレンズのバイナリデータがElectrode/Electrode_dataとEinzel_Lens/Einzel_Lens_dataにあることを確認したら次に進んでください
 
 ### 全体像を見たい時
-particles_trajectory.pyを実行してください
+particles_trajectory.pyを実行してください．
 
 ### アインツェルレンズ入射前を見たい時
 trajectory_before_lens.pyを実行してください．
 
-グラフのタイトルにレンズ入射前のビーム径が表示されるはずです
+### 共通事項
+グラフのタイトルにレンズ入射前のビーム径が表示されるはずです.
+
+なんか電極角度と電極間距離を最初と最後で2回聞かれるけど答えてあげてください．
 
 ## まとめ
 疲れた．
