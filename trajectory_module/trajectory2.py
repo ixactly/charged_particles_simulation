@@ -158,4 +158,4 @@ def calc_trajectory(itera, data, sample):
                 else:
                     Ey[j-1, k] = Ey[j-1, k] + SpaceChargeEffect1(I*(num/sample), (mesh.ny/2-j)*mesh.dy, v, k*mesh.dz+mesh.zmin, 405-(k*mesh.dz+mesh.zmin))
     print(r)    
-    return zlist, ylist, data1
+    return zlist, ylist, data1, r

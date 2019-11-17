@@ -399,7 +399,7 @@ def solve_eq():
     # reshape for surface plotting
     k = mesh.convert_to_3d_array(k)
 
-    with open('Einzel_Lens\Einzel_Lens_data\einzel_lensV{}.binaryfile'.format(V_num), 'wb') as lens:
+    with open('Einzel_Lens/Einzel_Lens_data/einzel_lensV{}.binaryfile'.format(V_num), 'wb') as lens:
         pickle.dump(k, lens)
 
 if __name__ == "__main__":

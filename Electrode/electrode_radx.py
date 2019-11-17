@@ -342,18 +342,18 @@ def solve_eq():
 
     rad = float(input("引出電極角度θ："))
     a = int(input("引出電極間距離a："))
-
+    V = int(input("印加電圧V："))
     mesh = CartesianGrid(rad=rad)
     if rad == 0:
-        A = mesh.set_boundary_circle_rad0(2000, 5, 19)
-        B = mesh.set_boundary_circle_rad0(2000, 17.8, 19)
-        C = mesh.set_boundary_2circle_rad0(1e-100, 2000, 5, 12.7, 17.8, 19)
-        D = mesh.set_boundary_2circle_rad0(1e-100, 2000, 11.5, 12.7, 17.8, 19)
-        E = mesh.set_boundary_circle_rad0(2000, 0, 19)
+        A = mesh.set_boundary_circle_rad0(V, 5, 19)
+        B = mesh.set_boundary_circle_rad0(V, 17.8, 9)
+        C = mesh.set_boundary_2circle_rad0(1e-100, V, 5, 12.7, 17.8, 19)
+        D = mesh.set_boundary_2circle_rad0(1e-100, V, 11.5, 12.7, 17.8, 19)
+        E = mesh.set_boundary_circle_rad0(V, 0, 19)
         electrode = mesh.make_cylinder_rad0(A, B, C, D, E, -1, 0, 2, 2+a, 4+a)
 
     else:
-        electrode = mesh.make_cylinder(1e-10, 2000, a)
+        electrode = mesh.make_cylinder(1e-10, V, a)
 
     # raplace equation
 
@@ -371,7 +371,7 @@ def solve_eq():
     # reshape for surface plotting
     k = mesh.convert_to_3d_array(k)
 
-    with open('Electrode/electrode_data/electrode_rad{}_a{}_remake.binaryfile'.format(rad, a), 'wb') as lens:
+    with open('Electrode/electrode_data/electrode_rad{}_a{}_V{}.binaryfile'.format(rad, a, V), 'wb') as lens:
         pickle.dump(k, lens)
 
 if __name__ == "__main__":

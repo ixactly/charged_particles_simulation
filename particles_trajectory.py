@@ -69,9 +69,10 @@ for i in range(int((sample)/2)):
     temporary = np.array(particles1[1][i+1])
     plt.plot(particles1[0][i+1], -temporary, color = "r")
 
-plt.xlim(-5, 415)
+plt.xlim(-5, )
 plt.ylim(-25, 25)
 plt.xlabel("x[mm]")
 plt.ylabel("y[mm]")
+plt.title("r = {}".format(particles2[3]))
 
 plt.show()

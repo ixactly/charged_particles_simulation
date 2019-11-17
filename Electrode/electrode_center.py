@@ -36,8 +36,8 @@ class CartesianGrid:
 def show_electrode():
     rad = int(input("引出電極の角度を入力してください："))
     a = int(input("引出電極間距離を入力してください："))
-    V = int(input("印加電圧を入力したください："))
-    with open('Electrode/Electrode_data/electrode_rad{}_a{}_V{}.binaryfile'.format(rad, a, V), 'rb') as electrode:
+    V_init = int(input("印加電圧を入力したください：")
+    with open('Electrode/Electrode_data/electrode_rad{}_a{}_V{}.binaryfile'.format(rad, a, V_init), 'rb') as electrode:
         V = pickle.load(electrode)
 
     mesh = CartesianGrid()
