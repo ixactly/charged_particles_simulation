@@ -1,0 +1,5 @@
+*.binaryfile
+
+__pycache__/
+Einzel_Lens/data/
+Electrode/Electrode_data/
