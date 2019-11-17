@@ -1,4 +1,9 @@
 # ECR is GOD
+git を clone しよう
+- gitをinstall
+    - git clone https://github.com/ixactly/charged_particles_simulation.git を実行
+- めんどくさかったら、リンクから緑色の"clone or download"からフォルダをダウンロード
+
 ## 環境構築
 - python3.6.5以上
 - pip install ~で各種インストール
@@ -13,7 +18,7 @@
         - python installの環境による
 - 僕が使ってたwin機は環境構築されてるけどこのコードはwin機で動きませ〜ん
     - 相対パスの部分のコード変えればできるけど．
-    
+
 ## 使い方
 - macOSかlinuxで動かしてください
 - 電位のバイナリを相対パスで保存してるのでCHARGED-PARTICLES-SIMULATIONのディレクトリから実行してください
